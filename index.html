@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Portfolio</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <!-- Czcionki: Tinos domyślnie, Bonheur Royale dla tytułu -->
+  <link href="https://fonts.googleapis.com/css2?family=Bonheur+Royale&family=Tinos&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header>
+    <nav class="simple-nav">
+      <a href="#projects" data-key="nav-projects">Projekty</a>
+      <a href="#contact" data-key="nav-contact">Kontakt</a>
+    </nav>
+
+    <nav>
+      <button id="lang-pl">PL</button>
+      <button id="lang-en">EN</button>
+    </nav>
+  </header>
+
+  <main>
+    <h1 class="main-title">Krishot</h1>
+    <h2 data-key="projects">Moje projekty</h2>
+
+    <section id="projects" class="gallery">
+      <img src="img/11.jpg" alt="Projekt 1">
+      <img src="img/22.jpg" alt="Projekt 2">
+      <img src="img/33.jpg" alt="Projekt 3">
+      <img src="img/44.jpg" alt="Projekt 4">
+    </section>
+
+    <section id="contact">
+      <h2 data-key="contact-heading">Kontakt</h2>
+      <p>Tu możesz wpisać dane kontaktowe lub formularz.</p>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span id="lightbox-close" class="lightbox-close">&times;</span>
+    <img id="lightbox-img" src="" alt="Podgląd" />
+  </div>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
