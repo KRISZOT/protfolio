@@ -36,6 +36,20 @@
       <h2 data-key="contact-heading">Kontakt</h2>
       <p>Tu możesz wpisać dane kontaktowe lub formularz.</p>
     </section>
+    <section id="contact">
+  <h2 data-key="contact">Kontakt</h2>
+  <form action="https://formsubmit.co/kriswi4405@gmail.com" method="POST">
+    <input type="text" name="name" placeholder="Imię" required>
+    <input type="email" name="email" placeholder="Twój e-mail" required>
+    <textarea name="message" placeholder="Wiadomość" required></textarea>
+    
+    <!-- Ukryte opcje -->
+    <input type="hidden" name="_subject" value="Nowa wiadomość z portfolio!">
+    <input type="hidden" name="_captcha" value="false">
+    
+    <button type="submit">Wyślij</button>
+  </form>
+</section>
   </main>
 
   <!-- Lightbox -->
