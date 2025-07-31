@@ -18,9 +18,10 @@ body {
 /* Proste menu */
 .simple-nav {
   display: flex;
-  justify-content: center;
   gap: 40px;
-  margin-bottom: 20px;
+  justify-content: center;
+  align-items: center;
+  flex: 1;
 }
 
 .simple-nav a {
@@ -47,32 +48,30 @@ body {
   width: 100%;
 }
 
-/* Przyciski językowe */
-nav button {
-  padding: 5px 10px;
-  cursor: pointer;
-}
-
 /* Galeria */
 .gallery {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 20px;
-  justify-content: center;
-  margin-top: 20px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 40px;
+  justify-items: center;
+  align-items: center;
+  margin: 40px 0;
 }
 
 .gallery img {
-  width: 300px;
+  width: 100%;
   height: auto;
+  object-fit: contain;
   border-radius: 8px;
-  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: none;
+  background: none;
   transition: transform 0.3s;
   cursor: pointer;
+  display: block;
 }
 
-.gallery img:hover {
-  transform: scale(1.05);
+.gallery img.panorama {
+  grid-column: span 2;
 }
 
 /* Lightbox */
@@ -106,32 +105,61 @@ nav button {
   user-select: none;
   font-weight: bold;
 }
-#contact {
-  max-width: 500px;
-  margin: 50px auto;
-  text-align: center;
-}
 
-form input,
-form textarea {
+
+/* Pasek nagłówka */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 3000;
   width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-family: inherit;
 }
 
-form button {
-  background-color: #333;
-  color: white;
-  padding: 10px 20px;
-  border: none;
+.header-bar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: #f9f9f9;
+  box-shadow: none;
+  padding: 10px 40px;
+  width: 100%;
+}
+
+/* Logo po lewej */
+.site-logo {
+  height: 60px;
+  margin-right: 30px;
+}
+
+/* Przyciski językowe po prawej */
+.lang-switch {
+  display: flex;
+  gap: 5px;
+  margin-right: 20px;
+}
+
+/* Styl przycisków językowych */
+.lang-switch button {
+  background-color: transparent;
+  border: 1px solid #333;
+  color: #333;
+  padding: 5px 10px;
+  font-size: 16px;
   cursor: pointer;
-  border-radius: 5px;
+  transition: background-color 0.3s, color 0.3s;
 }
 
-form button:hover {
-  background-color: #555;
+.lang-switch button:hover {
+  background-color: #333;
+  color: #fff;
+}
+
+.lang-switch button:focus {
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(51,51,51,0.3);
+}
+
+main h2 {
+  margin-top: 50px;
 }
 
