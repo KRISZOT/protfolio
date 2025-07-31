@@ -9,7 +9,7 @@ const translations = {
   },
   en: {
     projects: "My Projects",
-    navProjects: "index.html",
+    navProjects: "Projects",
     navContact: "Contact",
     projectsTitle: "Projects",
     contactHeading: "Contact",
