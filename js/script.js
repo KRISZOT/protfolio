@@ -9,7 +9,7 @@ const translations = {
   },
   en: {
     projects: "My Projects",
-    navProjects: "Projects",
+    navProjects: "index.html",
     navContact: "Contact",
     projectsTitle: "Projects",
     contactHeading: "Contact",
@@ -86,4 +86,3 @@ document.addEventListener("DOMContentLoaded", () => {
     }
   });
 });
-
